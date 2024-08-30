@@ -12,6 +12,39 @@ gulp.task('assets', () => {
         .pipe(copy('dist', { prefix: 2 }));
 });
 
+gulp.task('html', () => {
+    return gulp.src('src/*.html')
+        .pipe(replace('styles.css', 'styles.min.css'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('html:dev', () => {
+    return gulp.src('src/*.html')
+            .pipe(gulp.dest('dist'));
+});
+
+gulp.task('scripts', () => {
+    return gulp.src('src/scripts/**/.ts')
+        .pipe(tsc({
+            noImplicitAny: true,
+            target: 'es6',
+            isolatedModules: true
+        }))
+        .pipe(replace(/\sfrom '(\.\/[^']+)'/g, " from '$1.js'"))
+        .pipe(gulp.dest('dist/scripts'))
+})
+
+gulp.task('scripts:dev', () => {
+    return gulp.src('src/scripts/**/.ts')
+        .pipe(tsc({
+            noImplicitAny: true,
+            target: 'es6',
+            isolatedModules: true
+        }))
+        .pipe(replace(/\sfrom '(\.\/[^']+)'/g, " from '$1.js'"))
+        .pipe(gulp.dest('dist/scripts'))
+})
+
 gulp.task('styles', () => {
     return gulp.src('src/sass/**/*.scss')
         .pipe(sass())
@@ -25,17 +58,6 @@ gulp.task('styles:dev', () => {
         .pipe(sass())
         .pipe(concat('styles.css'))
         .pipe(gulp.dest('dist/styles'));
-});
-
-gulp.task('html', () => {
-    return gulp.src('src/*.html')
-        .pipe(replace('styles.css', 'styles.min.css'))
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('html:dev', () => {
-    return gulp.src('src/*.html')
-            .pipe(gulp.dest('dist'));
 });
 
 gulp.task('serve', () => {
