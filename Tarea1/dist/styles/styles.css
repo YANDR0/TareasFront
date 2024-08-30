@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  background-color: gray;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+.Titulos, .Inicio {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: midnightblue;
+  color: lightslategray;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.Inicio {
+  color: whitesmoke;
+  border: solid 5px midnightblue;
+}
+
+.Portada > div {
+  float: left;
+  width: 50%;
+}
+.Portada > div img {
+  width: 100%;
+  height: auto;
+}
+.Portada > div h2, .Portada > div p {
+  margin: 20px;
+}
+
+.Portada::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Info {
+  margin: 20px;
+}
+.Info div {
+  float: left;
+  width: 25%;
+}
+
+.Info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Pie {
+  margin: 0;
+  padding: 0;
+}
+.Pie div {
+  float: left;
+  background-color: aqua;
+  text-align: center;
+  width: 50%;
+}
+.Pie div ul {
+  list-style: none;
+}
+.Pie div ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .Portada > div, .Pie > div {
+    width: 100%;
+  }
+  .Info > div {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Info > div {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
