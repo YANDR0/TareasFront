@@ -1,0 +1,88 @@
+
+@import "vars";
+$weird-font: true;
+
+body {
+    margin: 0; 
+    background-color: gray;
+    @if $weird-font{
+        font-family: Copperplate, Papyrus, fantasy;
+    }
+}
+
+.Titulos{
+    @include principal-text;
+}
+
+.Inicio{
+    @extend .Titulos;
+    color: whitesmoke;
+    border: solid 5px $formal-c;
+}
+
+.Portada > div{     //Imagen, datos generales y pasatiempos
+    @include float;
+    width: $w-big;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    h2, p{
+        @include n-margin
+    }
+
+}
+
+.Portada::after {
+    @include clean
+}
+
+.Info{              //Educación, tecnologias y etc.
+    @include n-margin;
+    div{
+        @include float;
+        width: $w-small;
+    }
+}
+
+.Info::after {
+    @include clean
+}
+
+.Pie{              // Vinculos
+    
+    margin:0;
+    padding:0;
+    
+    div{
+        @include float;
+        background-color: aqua;
+        text-align: center;
+        width: $w-big;
+
+        ul{
+            list-style: none;
+            li{
+                display: inline-block;
+                margin: 10px;
+            }
+        }
+    }
+}
+    
+
+@media screen and (max-width: 1100px){
+    .Portada > div, .Pie > div{
+        width: mul($w-big, 2);
+    }
+
+    .Info > div{
+        width: mul($w-small, 2);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .Info > div{
+        width: mul($w-small, 4);
+    }
+}

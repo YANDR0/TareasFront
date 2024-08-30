@@ -1,0 +1,33 @@
+
+$fonts: "Comic Sans MS", cursive, sans-serif;
+$formal-c: midnightblue;
+$w-big: 50%;
+$w-small: 25%;
+
+@mixin principal-text{
+    text-align: center;
+    font-family: $fonts;
+    background-color: $formal-c;
+    color: lightslategray;
+    font-size: 2em;
+    margin:0;
+    padding:0;
+}
+
+@mixin float{
+    float: left;
+}
+
+@mixin n-margin{
+    margin: 20px;
+}
+
+@mixin clean{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@function mul($num1, $num2){
+    @return $num1 * $num2
+}
