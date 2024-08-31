@@ -4,12 +4,13 @@ const concat = require('gulp-concat');
 const cleanCss = require('gulp-clean-css');
 const copy = require('gulp-copy');
 const replace = require('gulp-replace');
+const tsc = require('gulp-typescript')
 const browserSync = require('browser-sync');
 
 
 gulp.task('assets', () => {
     return gulp.src('src/assets/**/*')
-        .pipe(copy('dist', { prefix: 2 }));
+        .pipe(copy('dist', { prefix: 1 }));
 });
 
 gulp.task('html', () => {
@@ -24,24 +25,22 @@ gulp.task('html:dev', () => {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('src/scripts/**/.ts')
+    return gulp.src('src/scripts/**/*.ts')
         .pipe(tsc({
             noImplicitAny: true,
             target: 'es6',
             isolatedModules: true
         }))
-        .pipe(replace(/\sfrom '(\.\/[^']+)'/g, " from '$1.js'"))
         .pipe(gulp.dest('dist/scripts'))
 })
 
 gulp.task('scripts:dev', () => {
-    return gulp.src('src/scripts/**/.ts')
+    return gulp.src('src/scripts/**/*.ts')
         .pipe(tsc({
             noImplicitAny: true,
             target: 'es6',
             isolatedModules: true
         }))
-        .pipe(replace(/\sfrom '(\.\/[^']+)'/g, " from '$1.js'"))
         .pipe(gulp.dest('dist/scripts'))
 })
 
