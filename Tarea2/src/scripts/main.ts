@@ -1,4 +1,31 @@
 
-// Luego le pongo cosas, ahorita es placeholder
+async function fetchData() {
+    const dir = '../assets/jsons/data.json';
+    const res = await fetch(dir);
+    const data = await res.json()
+    return data
+}
 
-console.log("hola mundo")
+function createPortada(){
+
+}
+
+function createInfo(){
+
+}
+
+function createFooter(){
+
+}
+
+const data = fetchData();
+createPortada();
+createInfo();
+createFooter();
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+{
+    "Portada" : {
+        "Datos generales": ["Fecha de nacimiento: 26 de Enero de 2003", "Nacionalidad: Mexicana"],
+        "Pasatiempos": "Normalmente en mi tiempo libre suelo consumir contenido de internet, jugar videojuegos, ver series o anime y en un pasado solía dibujar y leer y más cosas que por el momento no se me ocurren así que piensen en esto como un lore ipsum que explica mucho acerca de los aspectos más interesantes que puedes encontrar acerca de mi vida, dado que como pueden observar soy un individuo altamente interesante con muchas cosas que contar acerca de mí, así es"
+    },
+    "Info" : [
+        {"Educación": [
+            "Finalización de educación básica", 
+            "Bachillerato Pedro Arrupe SJ",
+            "Ingeniería en sistemas computacionales ITESO"
+        ]},
+        {"Experiencia laboral": [
+            "Prácticas en agencias de Dalton",
+            "Capturista en GDMX LOGISTICS",
+            "Creación de proyectos de software de manera independiente"
+        ]},
+        {"Tecnologias": [
+            "Python",
+            "SQL",
+            "C",
+            "Javascript",
+            "C++"
+        ]},
+        {"Habilidades": [
+            "Puntualidad",
+            "Organización",
+            "Pensamiento lógico-matemático",
+            "Entendimiento del inglés"
+        ]}
+    ],
+    "Pie": {
+        "Contacto": [
+            {"link": "https://www.linkedin.com/in/yael-alejandro-rodr%C3%ADguez-barreto-2293112b3/", "sitio": "Linkedin"},
+            {"link": "https://github.com/YANDR0", "sitio": "Github"},
+            {"sitio": "yael.alexrb@gmail.com"}
+        ],
+        "Proyectos": [
+            {"link": "https://github.com/YANDR0/Proyecto-web", "titulo": "Página web sencilla"},
+            {"link": "https://github.com/BetoC2/THE_game", "titulo": "Juego implementado en C"}
+        ]
+    }
+}
