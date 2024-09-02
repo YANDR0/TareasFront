@@ -13,6 +13,12 @@
     - Usando `npm run dev` como ya se mencionó para ver los cambios a la par
     - Ejecutando en su lugar `npm run exec` (No sin antes ejecutar cualquier build o dev)
 
+En caso de querer modificar el correo destino basta con:
+- Ingresar a `assets/jsons`, después ir a la sección "pie" del json `data.json`
+- Dirigirse al campo `Contacto` y finalmente cambiar el valor del último `sitio` de la lista
+
+Es decir: {"pie": {"contacto": [..., {"sitio": correo}] }}
+
 
 
 
