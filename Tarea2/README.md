@@ -17,7 +17,7 @@ En caso de querer modificar el correo destino basta con:
 - Ingresar a `assets/jsons`, después ir a la sección "pie" del json `data.json`
 - Dirigirse al campo `Contacto` y finalmente cambiar el valor del último `sitio` de la lista
 
-Es decir: {"pie": {"contacto": [..., "sitio": correo] }}
+Es decir: {"pie": {"contacto": [..., {"sitio": correo}] }}
 
 
 
