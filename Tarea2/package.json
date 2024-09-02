@@ -13,7 +13,8 @@
     "styles:dev": "gulp styels:dev",
     "build": "gulp",
     "build:dev": "gulp build:dev",
-    "dev": "gulp build:dev && gulp serve"
+    "dev": "gulp build:dev && gulp serve",
+    "exec": "gulp exec"
   },
   "author": "",
   "license": "ISC",

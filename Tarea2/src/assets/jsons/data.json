@@ -35,8 +35,8 @@
             {"sitio": "yael.alexrb@gmail.com"}
         ],
         "Proyectos": [
-            {"link": "https://github.com/YANDR0/Proyecto-web", "titulo": "Página web sencilla"},
-            {"link": "https://github.com/BetoC2/THE_game", "titulo": "Juego implementado en C"}
+            {"link": "https://github.com/YANDR0/Proyecto-web", "sitio": "Página web sencilla"},
+            {"link": "https://github.com/BetoC2/THE_game", "sitio": "Juego implementado en C"}
         ]
     }
 }

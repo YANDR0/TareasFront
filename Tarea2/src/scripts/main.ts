@@ -49,12 +49,56 @@ async function dynamicData() {
         actualPage.appendChild(divs)
     }
 
+    // Creacion pie
+    tmpData = data.Pie;
+    actualPage = document.getElementsByClassName('Pie')[0];
+    
+    for(let i in tmpData){
+        let divPie = document.createElement("div");
+        let hs = document.createElement("h2");
+        let text = document.createTextNode(i);
+        let uls = document.createElement("ul");
+        var correo = "";
+        hs.appendChild(text);
+        divPie.appendChild(hs);
 
-    //Creacion pie
+        for (let j = 0; j < tmpData[i].length; j++){
+            let lis = document.createElement("li");
+            text = document.createTextNode(tmpData[i][j]['sitio']);
+            let link = tmpData[i][j]['link'];
+            
+            if(!link){
+                correo = tmpData[i][j]['sitio'];
+                lis.appendChild(text);
+            } else {
+                let as = document.createElement("a");
+                as.href = link.toString();
+                as.appendChild(text);
+                lis.appendChild(as);
+            }
+
+            uls.appendChild(lis);
+        }
+
+        divPie.appendChild(uls);
+
+        if(i == "Contacto"){
+            divPie.insertAdjacentHTML('beforeend', 
+            `<form action="https://formsubmit.co/${correo}" method="POST">
+                <input type="text" name="name" placeholder="Nombre" required >
+                <input type="email" name="email" placeholder="Correo" required>
+                <button type="submit">Enviar</button>
+           </form><br>`);
+        }
+
+        actualPage.appendChild(divPie);        
+
+    }
+
 
 }
 
-dynamicData()
+dynamicData();
 
 
 

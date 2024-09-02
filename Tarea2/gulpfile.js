@@ -69,6 +69,15 @@ gulp.task('serve', () => {
     gulp.watch('src', gulp.series('build:dev')).on('change', browserSync.reload);
 });
 
+gulp.task('exec', () => {
+    browserSync.init({
+        server: {
+            baseDir: 'dist'
+        }
+    });
+
+})
+
 gulp.task('build:dev', gulp.series('styles:dev', 'scripts:dev', 'assets', 'html:dev'));
 
 gulp.task('default', gulp.series('styles', 'scripts', 'assets', 'html'));
