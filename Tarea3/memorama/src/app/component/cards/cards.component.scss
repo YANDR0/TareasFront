@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 32px;
+    display: inline-block;
+    background-color: palevioletred;
+    border-radius: 10px;
+    padding: 15px 32px;
+}
+
+.board > div{
+    float: left;
+    width: 10%;
+    
+    img{
+        width: 100%;
+        aspect-ratio: 0.7;
+    }
+}
+
+.pair{
+    opacity: 65%;
+}
+
+@media screen and (max-width: 1000px){
+    .board > div{
+        width: 20%;
+    }
+}
