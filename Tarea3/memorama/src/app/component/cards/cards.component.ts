@@ -52,6 +52,8 @@ export class CardsComponent {
 
     //Si las cartas son iguales
     if(c2.front == c.front){
+      c.pair = true;
+      c2.pair = true;
       this.gg++;
       return;
     }
@@ -75,12 +77,14 @@ class Card {
   back: string;
   front: string;
   facing: boolean;
+  pair: boolean;
 
   constructor(i: number, pos: number){
     this.index = pos
     this.back = 'https://raw.githubusercontent.com/YANDR0/images/main/assets/back.jpg';
     this.front = `https://raw.githubusercontent.com/YANDR0/images/main/assets/card${i}.png`;
     this.facing = false;
+    this.pair = false;
   }
 
 }

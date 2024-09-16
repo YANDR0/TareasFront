@@ -5,8 +5,12 @@
     <div class="board">
     @for(c of deck; track $index){
         <div class="card">
-         @if(c.facing){
-            <img src={{c.front}}>
+        @if(c.facing){
+            @if(c.pair){
+                <img src={{c.front}} class="pair">
+            } @else{
+                <img src={{c.front}}>
+            }
         } @else{
             <img (click)="flip(c.index)" src={{c.back}} >
         }

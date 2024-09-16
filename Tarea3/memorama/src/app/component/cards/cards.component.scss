@@ -24,6 +24,10 @@ button{
     }
 }
 
+.pair{
+    opacity: 60%;
+}
+
 @media screen and (max-width: 1000px){
     .board > div{
         width: 20%;
