@@ -2,15 +2,15 @@
 
 @if(gg < 10){
     <h1>Turns: {{turn}}</h1>
-    <div class="cards">
+    <div class="board">
     @for(c of deck; track $index){
-
+        <div class="card">
          @if(c.facing){
-            <img src={{c.front}} height="200px" width="150px">
+            <img src={{c.front}}>
         } @else{
-            <img (click)="flip(c.index)" src={{c.back}} height="200px" width="150px">
+            <img (click)="flip(c.index)" src={{c.back}} >
         }
-
+        </div>
     }
     </div>
 } @else{

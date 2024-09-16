@@ -13,3 +13,19 @@ button{
     border-radius: 10px;
     padding: 15px 32px;
 }
+
+.board > div{
+    float: left;
+    width: 10%;
+    
+    img{
+        width: 100%;
+        aspect-ratio: 0.7;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .board > div{
+        width: 20%;
+    }
+}
