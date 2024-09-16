@@ -1,10 +1,19 @@
-<p>cards works!</p>
-<div>
+
+
+@if(gg < 10){
+    <div>Turns: {{turn}}</div>
+    <div class="cards">
     @for(c of deck; track $index){
-        @if(c.facing){
+         @if(c.facing){
             <img src={{c.front}} width="150px">
         } @else{
-            <img (click)="flip(c)" src={{c.back}} width="150px">
+            <img (click)="flip(c.index)" src={{c.back}} width="150px">
         }
-    } 
-</div>
+    }
+    </div>
+} @else{
+    <div class="congrats">
+        <p>Congratulaciones usaste {{turn}} turnos</p>
+        <button (click)="endGame()">Salir</button>
+    </div>
+}
