@@ -1,0 +1,10 @@
+<p>cards works!</p>
+<div>
+    @for(c of deck; track $index){
+        @if(c.facing){
+            <img src={{c.front}} width="150px">
+        } @else{
+            <img (click)="flip(c)" src={{c.back}} width="150px">
+        }
+    } 
+</div>
