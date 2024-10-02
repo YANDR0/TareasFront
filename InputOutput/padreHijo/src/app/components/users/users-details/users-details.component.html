@@ -1,1 +1,39 @@
-<p>users-details works!</p>
+
+@if(dataUser){
+    <section>
+        <div>
+            <ul>
+                <li>Name: </li>
+                <li>Username: </li>
+                <li>Email: </li>
+                <li>Phone: </li>
+                <li>Website: </li>
+            </ul>
+            <ul>
+                <li>Company</li>
+                <li>Name: </li>
+                <li>CatchPhrase: </li>
+                <li>BS: </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <button (click)="cleanUser()">Clear user</button>
+    </section>
+} @else {
+    <section>Select a user</section>
+}
+
