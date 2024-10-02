@@ -4,11 +4,12 @@ ul {
 
 section>div{
     float: left;
-    &::after{
-        content: "";
-        display: table;
-        clear: both;
-    }
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 button{
