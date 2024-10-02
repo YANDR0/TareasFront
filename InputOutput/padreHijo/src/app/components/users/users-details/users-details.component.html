@@ -1,7 +1,7 @@
 
 @if(dataUser){
     <section>
-        <div>
+        <div class="black">
             <ul>
                 <li>Name: </li>
                 <li>Username: </li>
@@ -10,30 +10,30 @@
                 <li>Website: </li>
             </ul>
             <ul>
-                <li>Company</li>
+                <li clas="a">Company</li>
                 <li>Name: </li>
                 <li>CatchPhrase: </li>
                 <li>BS: </li>
             </ul>
         </div>
-        <div>
+        <div> 
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>{{dataUser.name}}</li>
+                <li>{{dataUser.username}}</li>
+                <li>{{dataUser.email}}</li>
+                <li>{{dataUser.phone}}</li>
+                <li>{{dataUser.website}}</li>
             </ul>
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><br></li>
+                <li>{{dataUser.company.name}}</li>
+                <li>{{dataUser.company.catchPhrase}}</li>
+                <li>{{dataUser.company.bs}}</li>
             </ul>
         </div>
-        <button (click)="cleanUser()">Clear user</button>
     </section>
+    <button (click)="cleanUser()">Clear user</button>
 } @else {
-    <section>Select a user</section>
+    <section style="text-align: center; color: darkcyan;">Select a user</section>
 }
 
