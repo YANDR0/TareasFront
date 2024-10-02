@@ -1,0 +1,17 @@
+
+.data{
+    
+    margin: 20px;
+
+    >div{
+        width: 50%;
+        float: left;
+    }
+
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+

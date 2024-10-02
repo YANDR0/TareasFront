@@ -1,0 +1,10 @@
+<h1>Users</h1>
+<section class="data">
+    <div>
+        <app-users-list (selectUserEvent)="getUser($event)" [actualUser]="idUser"></app-users-list>
+    </div>
+    <div>
+        <app-users-details (cleanUserEvent)="cleanUser()" [dataUser]="actualUser"></app-users-details>
+    </div>
+</section>
+

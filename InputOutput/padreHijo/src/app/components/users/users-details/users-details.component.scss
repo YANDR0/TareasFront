@@ -1,0 +1,29 @@
+ul {
+    list-style-type: none;
+}
+
+section>div{
+    float: left;
+}
+
+section::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+button{
+    margin-left: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 1px #999;
+    background-color: white;
+}
+
+.black{
+    font-weight: bold;
+}
+
+.a{
+    font-weight: bolder;
+}
